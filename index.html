@@ -1,1 +1,87 @@
-hello worlf
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Анкета відвідувача ресторану</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f8f8f8;
+            margin: 0;
+            padding: 20px;
+        }
+        .form-container {
+            background-color: #f1b93e;
+            padding: 20px;
+            border-radius: 8px;
+            width: 400px;
+            margin: auto;
+            box-shadow: 0 0 10px rgba(0,0,0,0.2);
+        }
+        h1 {
+            text-align: center;
+            color: #333;
+        }
+        label {
+            display: block;
+            margin-bottom: 5px;
+            font-weight: bold;
+        }
+        input, textarea, select {
+            width: 100%;
+            padding: 8px;
+            margin-bottom: 15px;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+        }
+        input[type="submit"] {
+            background-color: #333;
+            color: #fff;
+            border: none;
+            cursor: pointer;
+            font-size: 16px;
+        }
+        input[type="submit"]:hover {
+            background-color: #555;
+        }
+    </style>
+</head>
+<body>
+    <div class="form-container">
+        <h1>Анкета відвідувача ресторану</h1>
+        <form action="#" method="POST">
+            <label for="name">Ім'я:</label>
+            <input type="text" id="name" name="name" required>
+
+            <label for="phone">Телефон:</label>
+            <input type="tel" id="phone" name="phone" placeholder="+380(_) _--" required>
+
+            <label for="email">Email:</label>
+            <input type="email" id="email" name="email" required>
+
+            <label for="date">Дата відвідування:</label>
+            <input type="date" id="date" name="date" required>
+
+            <label for="feedback">Які ваші враження від закладу?</label>
+            <textarea id="feedback" name="feedback" rows="4" placeholder="Ваші коментарі"></textarea>
+
+            <label>Основна причина візиту:</label>
+            <select name="reason" required>
+                <option value="робота">Поради в роботі</option>
+                <option value="зустріч">Ділова зустріч</option>
+                <option value="відпочинок">Особистий відпочинок</option>
+                <option value="свято">Святкові події</option>
+            </select>
+
+            <label>Чи будете ви рекомендувати наш заклад?</label>
+            <select name="recommend" required>
+                <option value="так">Так</option>
+                <option value="ні">Ні</option>
+            </select>
+
+            <input type="submit" value="Надіслати">
+        </form>
+    </div>
+</body>
+</html>
